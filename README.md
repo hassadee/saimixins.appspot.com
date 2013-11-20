@@ -1,4 +1,4 @@
-sai.less
+sai
 =============
 
-sai.less is mixins extension for LESS CSS
+Aai is mixins extension for LESS and SASS
