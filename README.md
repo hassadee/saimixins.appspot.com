@@ -1,4 +1,4 @@
 sai
 =============
 
-Aai is mixins extension for LESS and SASS
+Sai is mixins extension for LESS and SASS
