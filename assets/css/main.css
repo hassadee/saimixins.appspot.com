@@ -123,7 +123,7 @@ you can use the generic selector below, but it's slower:
 }
 
 @font-face {
-  font-family: 'dancing_scriptregular';
+  font-family: "dancing_script_400";
   src: url("fonts/dancingscript/dancing_script-webfont.eot");
   src: url("fonts/dancingscript/dancing_script-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/dancingscript/dancing_script-webfont.woff") format("woff"), url("fonts/dancingscript/dancing_script-webfont.ttf") format("truetype"), url("fonts/dancingscript/dancing_script-webfont.svg#dancing_scriptregular") format("svg");
   font-weight: normal;
@@ -315,12 +315,12 @@ article:after {
 /* line 313, ../sass/main.scss */
 .proj-status .headline {
   color: white;
-  font-family: "dancing_scriptregular";
+  font-family: "dancing_script_400";
   font-size: 114px;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 100%;
   text-align: center;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 0px 1px 1px #333333;
 }
 
 /* line 324, ../sass/main.scss */
@@ -350,9 +350,9 @@ article:after {
 }
 /* line 345, ../sass/main.scss */
 .section-header h2 {
-  font-family: "dancing_scriptregular";
+  font-family: "dancing_script_400";
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
