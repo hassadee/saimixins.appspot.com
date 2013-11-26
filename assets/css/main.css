@@ -1,0 +1,428 @@
+/* Imports
+==================== */
+/* Reset
+==================== */
+/* line 29, ../sass/main.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 39, ../sass/main.scss */
+a,
+ul,
+ol,
+li,
+ul > li:before,
+ul > li:after {
+  list-style-type: none;
+}
+
+/* IcoMoon
+==================== */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon/icomoon.eot");
+  src: url("fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.woff") format("woff"), url("fonts/icomoon/icomoon.ttf") format("truetype"), url("fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 58, ../sass/main.scss */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/* line 74, ../sass/main.scss */
+.icon-facebook, .icon-twitter, .icon-mail, .icon-menu {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 84, ../sass/main.scss */
+.icon-facebook:before {
+  content: "\e001";
+}
+
+/* line 87, ../sass/main.scss */
+.icon-twitter:before {
+  content: "\e002";
+}
+
+/* line 90, ../sass/main.scss */
+.icon-mail:before {
+  content: "\e000";
+}
+
+/* line 93, ../sass/main.scss */
+.icon-menu:before {
+  content: "\30";
+}
+
+/* line 97, ../sass/main.scss */
+.icon {
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 69px;
+  -moz-border-radius: 69px;
+  -ms-border-radius: 69px;
+  -o-border-radius: 69px;
+  border-radius: 69px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 10px 1px 0;
+  width: 69px;
+  height: 69px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 69px;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* line 114, ../sass/main.scss */
+.icon:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Fonts
+==================== */
+@font-face {
+  font-family: 'museo_sans_rounded100';
+  src: url("fonts/museosansrounded-100/museosansrounded-100-webfont.eot");
+  src: url("fonts/museosansrounded-100/museosansrounded-100-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museosansrounded-100/museosansrounded-100-webfont.woff") format("woff"), url("fonts/museosansrounded-100/museosansrounded-100-webfont.ttf") format("truetype"), url("fonts/museosansrounded-100/museosansrounded-100-webfont.svg#museo_sans_rounded100") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'museo_sans_rounded300';
+  src: url("fonts/museosansrounded-300/museosansrounded-300-webfont.eot");
+  src: url("fonts/museosansrounded-300/museosansrounded-300-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museosansrounded-300/museosansrounded-300-webfont.woff") format("woff"), url("fonts/museosansrounded-300/museosansrounded-300-webfont.ttf") format("truetype"), url("fonts/museosansrounded-300/museosansrounded-300-webfont.svg#museo_sans_rounded300") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dancing_scriptregular';
+  src: url("fonts/dancingscript/dancing_script-webfont.eot");
+  src: url("fonts/dancingscript/dancing_script-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/dancingscript/dancing_script-webfont.woff") format("woff"), url("fonts/dancingscript/dancing_script-webfont.ttf") format("truetype"), url("fonts/dancingscript/dancing_script-webfont.svg#dancing_scriptregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variables
+==================== */
+/* Reset
+==================== */
+/* line 171, ../sass/main.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 181, ../sass/main.scss */
+a,
+ul,
+ol,
+li,
+ul > li:before,
+ul > li:after {
+  list-style-type: none;
+}
+
+/* line 185, ../sass/main.scss */
+li {
+  line-height: 20px;
+}
+
+/* line 189, ../sass/main.scss */
+img {
+  border: 0 none;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 196, ../sass/main.scss */
+figure {
+  margin: 0;
+}
+
+/* line 200, ../sass/main.scss */
+figcaption * {
+  padding: 0 10px;
+  margin: 0;
+}
+
+/* line 205, ../sass/main.scss */
+figcaption *:first-child {
+  padding-top: 5px;
+}
+
+/* line 208, ../sass/main.scss */
+figcaption *:last-child {
+  padding-bottom: 5px;
+}
+
+/* Global
+==================== */
+/* line 215, ../sass/main.scss */
+body, input, button, select, textarea {
+  color: #333;
+  font-family: "museo_sans_rounded100", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Text
+==================== */
+/* line 226, ../sass/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+  font-family: "museo_sans_rounded300", sans-serif;
+  font-weight: 300;
+  margin: 20px 0;
+  line-height: 100%;
+}
+
+/* line 234, ../sass/main.scss */
+h1 {
+  font-size: 55px;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 239, ../sass/main.scss */
+h2 {
+  font-size: 42px;
+}
+
+/* line 240, ../sass/main.scss */
+h3 {
+  font-size: 17px;
+}
+
+/* line 241, ../sass/main.scss */
+h4 {
+  font-size: 17px;
+}
+
+/* line 242, ../sass/main.scss */
+h5 {
+  font-size: 15px;
+}
+
+/* line 243, ../sass/main.scss */
+h6 {
+  font-size: 13px;
+}
+
+/* line 245, ../sass/main.scss */
+span {
+  display: block;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+/* line 251, ../sass/main.scss */
+p {
+  font-size: 18px;
+  margin: 10px 0 20px;
+}
+
+/* line 256, ../sass/main.scss */
+a {
+  font-family: "museo_sans_rounded300", sans-serif;
+  font-weight: 300;
+}
+
+/* line 261, ../sass/main.scss */
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Generic
+==================== */
+/* line 266, ../sass/main.scss */
+html {
+  background: #66cc9a;
+  background: -moz-linear-gradient(315deg, rgba(252, 87, 94, 0.3) 0%, rgba(80, 212, 220, 0.3) 100%) repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(252, 87, 94, 0.3)), color-stop(100%, rgba(80, 212, 220, 0.3))) repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
+  background: -webkit-linear-gradient(315deg, rgba(252, 87, 94, 0.3) 0%, rgba(80, 212, 220, 0.3) 100%) url("../img/white_grid.png") repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
+  background: -o-linear-gradient(315deg, rgba(252, 87, 94, 0.3) 0%, rgba(80, 212, 220, 0.3) 100%) repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
+  background: -ms-linear-gradient(315deg, rgba(252, 87, 94, 0.3) 0%, rgba(80, 212, 220, 0.3) 100%) repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
+  background: linear-gradient(315deg, rgba(252, 87, 94, 0.3), rgba(255, 194, 0, 0.3) 100%) repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* line 286, ../sass/main.scss */
+body h1 {
+  color: #333;
+}
+
+/* line 291, ../sass/main.scss */
+article:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 297, ../sass/main.scss */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 303, ../sass/main.scss */
+.preview-logo {
+  margin: 20px auto;
+  width: 420px;
+  height: 420px;
+}
+
+/* line 309, ../sass/main.scss */
+.proj-status {
+  margin: 50px auto;
+  width: 720px;
+  height: auto;
+}
+/* line 313, ../sass/main.scss */
+.proj-status .headline {
+  color: white;
+  font-family: "dancing_scriptregular";
+  font-size: 114px;
+  font-weight: 800;
+  line-height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* line 324, ../sass/main.scss */
+.page-header {
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 50px;
+  z-index: 4;
+}
+/* line 331, ../sass/main.scss */
+.page-header h1 {
+  color: black;
+  font-size: 32px;
+  margin: 10px;
+  text-align: left;
+}
+
+/* line 339, ../sass/main.scss */
+.section-header {
+  display: table;
+  margin: 0 0 20px 0;
+  padding: 15px 0;
+  width: 100%;
+  height: 30px;
+}
+/* line 345, ../sass/main.scss */
+.section-header h2 {
+  font-family: "dancing_scriptregular";
+  font-size: 48px;
+  font-weight: 600;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* line 356, ../sass/main.scss */
+.s-contact {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 50px 0;
+}
+/* line 360, ../sass/main.scss */
+.s-contact .contact-container ul {
+  text-align: center;
+}
+/* line 363, ../sass/main.scss */
+.s-contact .contact-container li {
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 370, ../sass/main.scss */
+.page-footer {
+  margin: 50px auto 10px;
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+}
+/* line 376, ../sass/main.scss */
+.page-footer li {
+  display: inline-block;
+  float: left;
+  margin: 7px 10px 0 0;
+}
+/* line 380, ../sass/main.scss */
+.page-footer li:first-child {
+  margin: 7px 10px 0 10px;
+}
+/* line 384, ../sass/main.scss */
+.page-footer .page-footer-copyright {
+  font-size: 16px;
+  text-align: center;
+}
+/* line 387, ../sass/main.scss */
+.page-footer .page-footer-copyright a {
+  color: #33b4e4;
+  text-decoration: none;
+}
+
+/* Forms
+==================== */
+/* line 400, ../sass/main.scss */
+form,
+input,
+textarea {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* Generic bootstrap fixes
+==================== */
+/* line 408, ../sass/main.scss */
+.btn {
+  border: 0;
+}
+
+/* line 411, ../sass/main.scss */
+.btn-large {
+  min-width: 200px;
+}

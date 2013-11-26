@@ -1,0 +1,329 @@
+// Table of Contents
+// =====================
+// Imports
+// Fonts
+// Variables
+// Mixins
+// Generic
+// Navigation
+// Tabzilla
+// Footer
+// Homepage
+// Profile detail
+// Profile create/edit
+// Generic Groups, Functional Areas and Search Results
+// Search Results
+// Groups
+// Generic bootstrap fixes
+// About
+// Invite/Invited
+
+/* Imports
+==================== */
+@import "compass/css3";
+
+
+/* Fonts
+==================== */
+@font-face {
+    font-family: 'museo_sans_rounded100';
+    src: url('fonts/museosansrounded-100/museosansrounded-100-webfont.eot');
+    src: url('fonts/museosansrounded-100/museosansrounded-100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansrounded-100/museosansrounded-100-webfont.woff') format('woff'),
+         url('fonts/museosansrounded-100/museosansrounded-100-webfont.ttf') format('truetype'),
+         url('fonts/museosansrounded-100/museosansrounded-100-webfont.svg#museo_sans_rounded100') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans_rounded300';
+    src: url('fonts/museosansrounded-300/museosansrounded-300-webfont.eot');
+    src: url('fonts/museosansrounded-300/museosansrounded-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansrounded-300/museosansrounded-300-webfont.woff') format('woff'),
+         url('fonts/museosansrounded-300/museosansrounded-300-webfont.ttf') format('truetype'),
+         url('fonts/museosansrounded-300/museosansrounded-300-webfont.svg#museo_sans_rounded300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Variables
+==================== */
+$translucent-white:	rgba(255, 255, 255, 0.5);
+
+$light-blue:	#1BBC9B;
+$gray:			#8B8B8B;
+$green:			#9BC148;
+$white:			#FFFFFF;
+$dark-white:	#F4F4F4;
+$black:			#000000;
+$light-black:	#333333;
+$blue:			#33B4E4;
+
+$mat-glowgreen:		#56DE81;
+$mat-glowskyblue:	#73B4EF;
+$mat-whtie:			$white;
+$mat-pink:			#EC44B0;
+$mat-red:			#D41516;
+$mat-orange:		#FF7900;
+$mat-tan:			#B7A158;
+$mat-yellow:		#DBD723;
+$mat-lightgreen:	#B1F103;
+$mat-green:			#56B320;
+$mat-blue:			#22A1D8;
+$mat-black:			$black;
+$mat-oceanblue:		#008080;
+$mat-purple:		#A020F0;
+$mat-brown:			#885921;
+$mat-lightgray:		#C0C0C0;
+$mat-gray:			#A6B3B3;
+$mat-cream:			#FFF5D1;
+
+
+/* Mixins
+==================== */
+
+// @mixin border-shadow ($style, $c) when (iscolor($c)) {
+// 	-webkit-box-shadow:	$style $c;
+// 	-moz-box-shadow:	$style $c;
+// 	-ms-box-shadow:		$style $c;
+// 	-o-box-shadow:		$style $c;
+// 	box-shadow:			$style $c;
+// }
+
+// @mixin transform ($string) {
+//     -webkit-transform:	$string;
+//     -moz-transform:		$string;
+//     -ms-transform:		$string;
+//     -o-transform:		$string;
+//     transform:			 $string;
+// }
+
+// @mixin blur ($blur: 10px) {
+// 	-webkit-filter:	blur($blur);
+// 	-moz-filter:	blur($blur);
+// 	-o-filter:		blur($blur);
+// 	-ms-filter:		blur($blur);
+// 	filter:			blur($blur);
+// 	opacity: 0.7;
+// }
+
+/* Reset
+==================== */
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+ul,
+ol,
+li,
+ul > li:before,
+ul > li:after {
+	list-style-type: none;
+}
+
+li {
+	line-height: 20px;
+}
+
+img {
+	border: 0 none;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption * {
+	padding: 0 10px;
+	margin: 0;
+}
+
+figcaption *:first-child {
+	padding-top: 5px;
+}
+figcaption *:last-child {
+	padding-bottom: 5px;
+}
+
+
+/* Generic
+==================== */
+html {
+	overflow: hidden;
+}
+body {
+	background: $white;
+}
+
+X3D, x3d {
+	background: #afb6bc;
+	background: url("../../../assets/images/white_grid.png") repeat fixed 0% 0%;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+		top: 0;
+		left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+article:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+.page-header {
+	background: transparentize($translucent-white, 0.3);
+	position: absolute;
+		top: 0;
+		left: 10px;
+	// width: 200px;
+	height: 50px;
+	z-index: 4;
+	h1 {
+		color: $black;
+		font-size: 32px;
+		margin: 10px;
+		text-align: left;
+	}
+}
+
+.page-navigation {
+	background: $translucent-white;
+	position: absolute;
+		top: 0;
+		left: 0;
+	width: 100%;
+	height: 50px;
+}
+
+.page-footer {
+	background: $translucent-white;
+	position: absolute;
+		bottom: 0;
+		left: 0;
+	width: 100%;
+	height: 30px;
+
+	font-size: 14px;
+	li {
+		display: inline-block;
+		float: left;
+		margin: 7px 10px 0 0;
+		&:first-child {
+			margin: 7px 10px 0 10px;
+		}
+	}
+	.page-footer-copyright {
+		float: right;
+		margin: 7px 10px 0 0;
+		font-size: 14px;
+	}
+}
+
+.model-info {
+	// background: $translucent-white;
+	max-width: 400px;
+	height: 200px;
+	padding: 10px;
+	position: absolute;
+		top: 60px;
+		left: 10px;
+	z-index: 1;
+	h2 {
+		font-size: 28px;
+	}
+}
+
+.editor-container {
+	background: $translucent-white;
+	border: 1px solid $dark-white;
+	display: block;
+	margin: 10px 20px;
+	padding: 10px;
+	position: absolute;
+		top: 60px;
+		right: 0;
+	width: 350px;
+
+	color: $black;
+}
+	.color-editor {
+		background: transparent;
+		display: block;
+		padding: 10px;
+		li {
+			border: 1px solid $black;
+			@include border-radius(50px);
+			cursor: pointer;
+			display: inline-block;
+			margin: 5px;
+			opacity: 1;
+			width: 50px;
+			height: 50px;
+
+			color: $black;
+			text-align: center;
+			line-height: 50px;
+			label {
+				width: 50px;
+				line-height: 50px;
+			}
+		}
+	}
+
+.model-container {
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.topic {
+	background: transparent;
+	padding: 0;
+}
+
+.page-navigation {
+	li a {
+		padding: 0;
+	}
+}
+
+
+/* Forms
+==================== */
+form,
+input,
+textarea {
+	@include border-radius(0);
+}
+
+
+/* Generic bootstrap fixes
+==================== */
+
+.btn {
+	border: 0;
+}
+	.btn-large {
+		min-width: 200px;
+	}
