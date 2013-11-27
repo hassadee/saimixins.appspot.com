@@ -411,3 +411,26 @@ textarea {
 	.btn-large {
 		min-width: 200px;
 	}
+
+
+/* 760px
+==================== */
+@media only screen and (max-width: 760px) {
+	.preview-logo {
+		margin: 10px auto 0;
+		width: 300px;
+		height: 300px;
+	}
+	.proj-status {
+		margin: 30px auto;
+		width: 90%;
+		.headline {
+			font-size: 62px;
+		}
+	}
+	.page-footer {
+		.page-footer-copyright {
+			font-size: 14px;
+		}
+	}
+}
