@@ -281,39 +281,43 @@ html {
   min-height: 100%;
 }
 
-/* line 287, ../sass/main.scss */
+/* line 286, ../sass/main.scss */
+body {
+  padding: 0 0 20px 0;
+}
+/* line 288, ../sass/main.scss */
 body h1 {
   color: #333;
 }
 
-/* line 292, ../sass/main.scss */
+/* line 293, ../sass/main.scss */
 article:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/* line 298, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 .container {
   margin: 0 auto;
   width: 100%;
   height: 100%;
 }
 
-/* line 304, ../sass/main.scss */
+/* line 305, ../sass/main.scss */
 .preview-logo {
   margin: 20px auto;
   width: 420px;
   height: 420px;
 }
 
-/* line 310, ../sass/main.scss */
+/* line 311, ../sass/main.scss */
 .proj-status {
   margin: 50px auto;
   width: 720px;
   height: auto;
 }
-/* line 314, ../sass/main.scss */
+/* line 315, ../sass/main.scss */
 .proj-status .headline {
   color: white;
   font-family: "dancing_script_400";
@@ -324,7 +328,7 @@ article:after {
   text-shadow: 0px 1px 1px #333333;
 }
 
-/* line 325, ../sass/main.scss */
+/* line 326, ../sass/main.scss */
 .page-header {
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
@@ -333,7 +337,7 @@ article:after {
   height: 50px;
   z-index: 4;
 }
-/* line 332, ../sass/main.scss */
+/* line 333, ../sass/main.scss */
 .page-header h1 {
   color: black;
   font-size: 32px;
@@ -341,7 +345,7 @@ article:after {
   text-align: left;
 }
 
-/* line 340, ../sass/main.scss */
+/* line 341, ../sass/main.scss */
 .section-header {
   display: table;
   margin: 0 0 20px 0;
@@ -349,7 +353,7 @@ article:after {
   width: 100%;
   height: 30px;
 }
-/* line 346, ../sass/main.scss */
+/* line 347, ../sass/main.scss */
 .section-header h2 {
   font-family: "dancing_script_400";
   font-size: 48px;
@@ -360,22 +364,22 @@ article:after {
   text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
 }
 
-/* line 357, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 .s-contact {
   background: rgba(255, 255, 255, 0.2);
   padding: 50px 0;
 }
-/* line 361, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 .s-contact .contact-container ul {
   text-align: center;
 }
-/* line 364, ../sass/main.scss */
+/* line 365, ../sass/main.scss */
 .s-contact .contact-container li {
   display: inline-block;
   text-align: center;
 }
 
-/* line 371, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 .page-footer {
   margin: 50px auto 10px;
   width: 100%;
@@ -383,21 +387,21 @@ article:after {
   font-size: 14px;
   text-align: center;
 }
-/* line 378, ../sass/main.scss */
+/* line 379, ../sass/main.scss */
 .page-footer li {
   display: inline-block;
   float: left;
   margin: 7px 10px 0 0;
 }
-/* line 382, ../sass/main.scss */
+/* line 383, ../sass/main.scss */
 .page-footer li:first-child {
   margin: 7px 10px 0 10px;
 }
-/* line 386, ../sass/main.scss */
+/* line 387, ../sass/main.scss */
 .page-footer .page-footer-copyright {
   font-size: 16px;
 }
-/* line 388, ../sass/main.scss */
+/* line 389, ../sass/main.scss */
 .page-footer .page-footer-copyright a {
   color: #33b4e4;
   text-decoration: none;
@@ -405,7 +409,7 @@ article:after {
 
 /* Forms
 ==================== */
-/* line 401, ../sass/main.scss */
+/* line 402, ../sass/main.scss */
 form,
 input,
 textarea {
@@ -418,12 +422,12 @@ textarea {
 
 /* Generic bootstrap fixes
 ==================== */
-/* line 409, ../sass/main.scss */
+/* line 410, ../sass/main.scss */
 .btn {
   border: 0;
 }
 
-/* line 412, ../sass/main.scss */
+/* line 413, ../sass/main.scss */
 .btn-large {
   min-width: 200px;
 }
@@ -431,24 +435,24 @@ textarea {
 /* 760px
 ==================== */
 @media only screen and (max-width: 760px) {
-  /* line 420, ../sass/main.scss */
+  /* line 421, ../sass/main.scss */
   .preview-logo {
     margin: 10px auto 0;
     width: 300px;
     height: 300px;
   }
 
-  /* line 425, ../sass/main.scss */
+  /* line 426, ../sass/main.scss */
   .proj-status {
     margin: 30px auto;
     width: 90%;
   }
-  /* line 428, ../sass/main.scss */
+  /* line 429, ../sass/main.scss */
   .proj-status .headline {
     font-size: 62px;
   }
 
-  /* line 433, ../sass/main.scss */
+  /* line 434, ../sass/main.scss */
   .page-footer .page-footer-copyright {
     font-size: 14px;
   }
