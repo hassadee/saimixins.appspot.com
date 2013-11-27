@@ -246,6 +246,7 @@ span {
 	display: block;
 	font-size: 16px;
 	line-height: 100%;
+	margin: 10px 0;
 }
 
 p {
@@ -373,6 +374,7 @@ article:after {
 	height: 30px;
 
 	font-size: 14px;
+	text-align: center;
 	li {
 		display: inline-block;
 		float: left;
@@ -383,7 +385,6 @@ article:after {
 	}
 	.page-footer-copyright {
 		font-size: 16px;
-		text-align: center;
 		a {
 			color: $blue;
 			text-decoration: none;

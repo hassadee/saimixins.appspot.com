@@ -1,2 +1,4 @@
 
 *.scssc
+
+assets/sass/.sass-cache/*

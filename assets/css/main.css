@@ -244,28 +244,29 @@ span {
   display: block;
   font-size: 16px;
   line-height: 100%;
+  margin: 10px 0;
 }
 
-/* line 251, ../sass/main.scss */
+/* line 252, ../sass/main.scss */
 p {
   font-size: 18px;
   margin: 10px 0 20px;
 }
 
-/* line 256, ../sass/main.scss */
+/* line 257, ../sass/main.scss */
 a {
   font-family: "museo_sans_rounded300", sans-serif;
   font-weight: 300;
 }
 
-/* line 261, ../sass/main.scss */
+/* line 262, ../sass/main.scss */
 article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
 /* Generic
 ==================== */
-/* line 266, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 html {
   background: #66cc9a;
   background: -moz-linear-gradient(315deg, rgba(252, 87, 94, 0.3) 0%, rgba(80, 212, 220, 0.3) 100%) repeat 0% 0%, url("../img/white_grid.png") repeat 0% 0% transparent;
@@ -280,39 +281,39 @@ html {
   min-height: 100%;
 }
 
-/* line 286, ../sass/main.scss */
+/* line 287, ../sass/main.scss */
 body h1 {
   color: #333;
 }
 
-/* line 291, ../sass/main.scss */
+/* line 292, ../sass/main.scss */
 article:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/* line 297, ../sass/main.scss */
+/* line 298, ../sass/main.scss */
 .container {
   margin: 0 auto;
   width: 100%;
   height: 100%;
 }
 
-/* line 303, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 .preview-logo {
   margin: 20px auto;
   width: 420px;
   height: 420px;
 }
 
-/* line 309, ../sass/main.scss */
+/* line 310, ../sass/main.scss */
 .proj-status {
   margin: 50px auto;
   width: 720px;
   height: auto;
 }
-/* line 313, ../sass/main.scss */
+/* line 314, ../sass/main.scss */
 .proj-status .headline {
   color: white;
   font-family: "dancing_script_400";
@@ -323,7 +324,7 @@ article:after {
   text-shadow: 0px 1px 1px #333333;
 }
 
-/* line 324, ../sass/main.scss */
+/* line 325, ../sass/main.scss */
 .page-header {
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
@@ -332,7 +333,7 @@ article:after {
   height: 50px;
   z-index: 4;
 }
-/* line 331, ../sass/main.scss */
+/* line 332, ../sass/main.scss */
 .page-header h1 {
   color: black;
   font-size: 32px;
@@ -340,7 +341,7 @@ article:after {
   text-align: left;
 }
 
-/* line 339, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 .section-header {
   display: table;
   margin: 0 0 20px 0;
@@ -348,7 +349,7 @@ article:after {
   width: 100%;
   height: 30px;
 }
-/* line 345, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .section-header h2 {
   font-family: "dancing_script_400";
   font-size: 48px;
@@ -359,44 +360,44 @@ article:after {
   text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
 }
 
-/* line 356, ../sass/main.scss */
+/* line 357, ../sass/main.scss */
 .s-contact {
   background: rgba(255, 255, 255, 0.2);
   padding: 50px 0;
 }
-/* line 360, ../sass/main.scss */
+/* line 361, ../sass/main.scss */
 .s-contact .contact-container ul {
   text-align: center;
 }
-/* line 363, ../sass/main.scss */
+/* line 364, ../sass/main.scss */
 .s-contact .contact-container li {
   display: inline-block;
   text-align: center;
 }
 
-/* line 370, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 .page-footer {
   margin: 50px auto 10px;
   width: 100%;
   height: 30px;
   font-size: 14px;
+  text-align: center;
 }
-/* line 376, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 .page-footer li {
   display: inline-block;
   float: left;
   margin: 7px 10px 0 0;
 }
-/* line 380, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 .page-footer li:first-child {
   margin: 7px 10px 0 10px;
 }
-/* line 384, ../sass/main.scss */
+/* line 386, ../sass/main.scss */
 .page-footer .page-footer-copyright {
   font-size: 16px;
-  text-align: center;
 }
-/* line 387, ../sass/main.scss */
+/* line 388, ../sass/main.scss */
 .page-footer .page-footer-copyright a {
   color: #33b4e4;
   text-decoration: none;
@@ -404,7 +405,7 @@ article:after {
 
 /* Forms
 ==================== */
-/* line 400, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 form,
 input,
 textarea {
@@ -417,12 +418,12 @@ textarea {
 
 /* Generic bootstrap fixes
 ==================== */
-/* line 408, ../sass/main.scss */
+/* line 409, ../sass/main.scss */
 .btn {
   border: 0;
 }
 
-/* line 411, ../sass/main.scss */
+/* line 412, ../sass/main.scss */
 .btn-large {
   min-width: 200px;
 }
@@ -430,24 +431,24 @@ textarea {
 /* 760px
 ==================== */
 @media only screen and (max-width: 760px) {
-  /* line 419, ../sass/main.scss */
+  /* line 420, ../sass/main.scss */
   .preview-logo {
     margin: 10px auto 0;
     width: 300px;
     height: 300px;
   }
 
-  /* line 424, ../sass/main.scss */
+  /* line 425, ../sass/main.scss */
   .proj-status {
     margin: 30px auto;
     width: 90%;
   }
-  /* line 427, ../sass/main.scss */
+  /* line 428, ../sass/main.scss */
   .proj-status .headline {
     font-size: 62px;
   }
 
-  /* line 432, ../sass/main.scss */
+  /* line 433, ../sass/main.scss */
   .page-footer .page-footer-copyright {
     font-size: 14px;
   }
