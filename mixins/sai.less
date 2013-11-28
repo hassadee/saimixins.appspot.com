@@ -10,7 +10,7 @@ Sai Mixins Extension for LESS v0.1
 * http://www.opensource.org/licenses/mit-license.php
 ---------------------------------------------------*/
 
-.background-size(@size) {
+.background-size(@size: 100%) {
     -webkit-background-size:    @size;
     -moz-background-size:       @size;
     -o-background-size:         @size;
@@ -23,6 +23,14 @@ Sai Mixins Extension for LESS v0.1
     -ms-column-count:       @quantity;
     -o-column-count:        @quantity;
     column-count:           @quantity;
+}
+
+.column-rule(@width: 1px, @style: solid, @color: #000000) {
+    -webkit-column-rule:    @width @style @color;
+    -moz-column-rule:       @width @style @color;
+    -ms-column-rule:        @width @style @color;
+    -o-column-rule:         @width @style @color;
+    column-rule:            @width @style @color;
 }
 
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
