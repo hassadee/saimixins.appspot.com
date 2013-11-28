@@ -16,9 +16,11 @@ Sai Mixins Extension for LESS v0.1
 * Border
 * Border Radius
 * Box Shadow
+* Calculate
 * Columns
 * Font Face
 * Opacity
+* Text Shadow
 * Transform
 * Transition Duration
 =============================================================== */
@@ -111,6 +113,25 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
+/* Calculate
+=============================================================== */
+.width-calc (
+    @expression
+) {
+    width:  -webkit-calc(@expression);
+    width:  -moz-calc(@expression);
+    width:  calc(@expression);
+}
+
+.height-calc (
+    @expression
+) {
+    height:  -webkit-calc(@expression);
+    height:  -moz-calc(@expression);
+    height:  calc(@expression);
+}
+
+
 /* Columns
 =============================================================== */
 .column-count(
@@ -126,7 +147,7 @@ Sai Mixins Extension for LESS v0.1
 .column-rule(
     @width: 1px,
     @style: solid,
-    @color: #000000
+    @color: #333333
 ) {
     -webkit-column-rule:    @arguments;
     -moz-column-rule:       @arguments;
@@ -140,12 +161,13 @@ Sai Mixins Extension for LESS v0.1
 =============================================================== */
 .font-face (
     @name,
-    @font-files,
+    @font-file,
+    @format,
     @weight: normal,
     @style: normal
 ) {
     font-family:    @name;
-    // src: url(@font-files)
+    src: url(@font-file), format(@format);
     font-weight:    @weight;
     font-style:     @style;
 }
@@ -162,6 +184,18 @@ Sai Mixins Extension for LESS v0.1
     -moz-opacity:   @opa;
     -khtml-opacity: @opa;
     opacity:        @opa;
+}
+
+
+/* Text Shadow
+=============================================================== */
+.text-shadow(
+    @h-offset: 0px,
+    @v-offset: 0px,
+    @blur: 1px,
+    @color: #333333;
+) {
+    text-shadow: @arguments;
 }
 
 
