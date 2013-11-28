@@ -2,6 +2,8 @@
 
 # Sai : Mixins Extension for LESS & SASS
 
+**Reference website: [Sai Mixins Extension](http://saimixins.appspot.com/)**
+
 Sai is a Mixins extension and CSS Authoring Framework for LESS and SASS/SCSS.
 
 This will help you increase performance and reduce time of writing CSS. So you don't need to worry about browsers prefix anymore!
@@ -23,7 +25,7 @@ Or just create issue here in this GitHub repository.
 ## License
 
 
-Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+Licensed under the MIT license: [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 ===
 
