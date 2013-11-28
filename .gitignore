@@ -1,4 +1,14 @@
 
 assets/sass/.sass-cache/*
 
-compiled/sai.css
+compiled/*
+
+assets/*
+
+index.html
+
+main.py
+
+app.yaml
+
+index.yaml
