@@ -1,6 +1,6 @@
-/*---------------------------------------------------
+/* ===============================================================
 Sai Mixins Extension for LESS v0.1
----------------------------------------------------
+==================================================================
 * Author: Hassadee Pimsuwan | @hapztron
 * More info at: http://saimixins.appspot.com
 * GitHub Repository at: https://github.com/hapztron/sai
@@ -8,32 +8,29 @@ Sai Mixins Extension for LESS v0.1
 * Copyright (c) 2013 - Hassadee Pimsuwan
 * Licensed under the MIT license:
 * http://www.opensource.org/licenses/mit-license.php
----------------------------------------------------*/
+=================================================================
+* Table of Contents
+=================================================================
+* Background Gradient
+* Background Size
+* Border
+* Border Radius
+* Box Shadow
+* Columns
+* Font Face
+* Opacity
+* Transform
+* Transition Duration
+=============================================================== */
 
-.background-size(@size: 100%) {
-    -webkit-background-size:    @size;
-    -moz-background-size:       @size;
-    -o-background-size:         @size;
-    background-size:            @size;
-}
 
-.column-count(@quantity) {
-    -webkit-column-count:   @quantity;
-    -moz-column-count:      @quantity;
-    -ms-column-count:       @quantity;
-    -o-column-count:        @quantity;
-    column-count:           @quantity;
-}
-
-.column-rule(@width: 1px, @style: solid, @color: #000000) {
-    -webkit-column-rule:    @width @style @color;
-    -moz-column-rule:       @width @style @color;
-    -ms-column-rule:        @width @style @color;
-    -o-column-rule:         @width @style @color;
-    column-rule:            @width @style @color;
-}
-
-.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+/* Background Gradient
+=============================================================== */
+.gradient(
+    @color: #F5F5F5,
+    @start: #EEE,
+    @stop: #FFF
+) {
     background: @color;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
     background: -ms-linear-gradient(bottom, @start, @stop);
@@ -42,7 +39,11 @@ Sai Mixins Extension for LESS v0.1
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @stop, @start));
 }
 
-.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+.bw-gradient(
+    @color: #F5F5F5,
+    @start: 0,
+    @stop: 255
+) {
     background: @color;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)), color-stop(1, rgb(@stop,@stop,@stop)));
     background: -ms-linear-gradient(bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
@@ -51,22 +52,41 @@ Sai Mixins Extension for LESS v0.1
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start)));
 }
 
-.border (@border-width: 1px, @top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
-    border-top:     solid @border-width @top-color;
-    border-left:    solid @border-width @left-color;
-    border-right:   solid @border-width @right-color;
-    border-bottom:  solid @border-width @bottom-color;
+
+/* Background Size
+=============================================================== */
+.background-size(
+    @size: 100%
+) {
+    -webkit-background-size:    @size;
+    -moz-background-size:       @size;
+    -o-background-size:         @size;
+    background-size:            @size;
 }
 
-.box-shadow (@x-axis: 0, @y-axis: 1px, @blur: 2px, @color: #333) when (iscolor(@color)) {
-    -moz-box-shadow:    @x-axis @y-axis @blur @color;
-    -webkit-box-shadow: @x-axis @y-axis @blur @color;
-    -ms-box-shadow:     @x-axis @y-axis @blur @color;
-    -o-box-shadow:      @x-axis @y-axis @blur @color;
-    box-shadow:         @x-axis @y-axis @blur @color;
+
+/* Border
+=============================================================== */
+.border (
+    @style: solid,
+    @border-width: 1px,
+    @top-color: #EEE,
+    @right-color: #EEE,
+    @bottom-color: #EEE,
+    @left-color: #EEE
+) {
+    border-top:     @arguments;
+    border-left:    @arguments;
+    border-right:   @arguments;
+    border-bottom:  @arguments;
 }
 
-.border-radius (@radius: 5px) {
+
+/* Border Radius
+=============================================================== */
+.border-radius (
+    @radius: 5px
+) {
     -webkit-border-radius:  @radius;
     -moz-border-radius:     @radius;
     -ms-border-radius:      @radius;
@@ -74,7 +94,68 @@ Sai Mixins Extension for LESS v0.1
     border-radius:          @radius;
 }
 
-.opacity (@opa: 0.75) {
+
+/* Box Shadow
+=============================================================== */
+.box-shadow (
+    @x-axis: 0,
+    @y-axis: 1px,
+    @blur: 2px,
+    @color: #333
+) when (iscolor(@color)) {
+    -moz-box-shadow:    @arguments;
+    -webkit-box-shadow: @arguments;
+    -ms-box-shadow:     @arguments;
+    -o-box-shadow:      @arguments;
+    box-shadow:         @arguments;
+}
+
+
+/* Columns
+=============================================================== */
+.column-count(
+    @quantity
+) {
+    -webkit-column-count:   @quantity;
+    -moz-column-count:      @quantity;
+    -ms-column-count:       @quantity;
+    -o-column-count:        @quantity;
+    column-count:           @quantity;
+}
+
+.column-rule(
+    @width: 1px,
+    @style: solid,
+    @color: #000000
+) {
+    -webkit-column-rule:    @arguments;
+    -moz-column-rule:       @arguments;
+    -ms-column-rule:        @arguments;
+    -o-column-rule:         @arguments;
+    column-rule:            @arguments;
+}
+
+
+/* Font Face
+=============================================================== */
+.font-face (
+    @name,
+    @font-files,
+    @weight: normal,
+    @style: normal
+) {
+    font-family:    @name;
+    // src: url(@font-files)
+    font-weight:    @weight;
+    font-style:     @style;
+}
+
+
+/* Opacity
+=============================================================== */
+.opacity (
+    @opa: 0.75
+) {
     @ms-opa:        (@opa * 100);
     -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ms-opa)";
     filter:         alpha(opacity=@ms-opa);
@@ -83,10 +164,29 @@ Sai Mixins Extension for LESS v0.1
     opacity:        @opa;
 }
 
-.translate3d(@x, @y, @z) {
+
+/* Transform
+=============================================================== */
+.translate3d(
+    @x: 0,
+    @y: 0,
+    @z: 0
+) {
     -webkit-transform:  translate3d(@x, @y, @z);
     -moz-transform:     translate3d(@x, @y, @z);
     -ms-transform:      translate3d(@x, @y, @z);
     -o-transform:       translate3d(@x, @y, @z);
     transform:          translate3d(@x, @y, @z);
+}
+
+
+/* Transition Duration
+=============================================================== */
+.transition-duration(
+    @duration: 0.4s
+) {
+    -moz-transition-duration:       @duration;
+    -webkit-transition-duration:    @duration;
+    -o-transition-duration:         @duration;
+    transition-duration:            @duration;
 }
