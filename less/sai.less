@@ -9,7 +9,7 @@ Sai Mixins Extension for LESS v0.1
 * Licensed under the MIT license:
 * http://www.opensource.org/licenses/mit-license.php
 =================================================================
-* Table of Contents
+* CSS3 : Table of Contents
 =================================================================
 * Background Gradient
 * Background Size
@@ -23,6 +23,12 @@ Sai Mixins Extension for LESS v0.1
 * Text Shadow
 * Transform
 * Transition Duration
+=================================================================
+* Typography : Table of Contents
+=================================================================
+* Links
+* Lists
+* Text
 =============================================================== */
 
 
@@ -223,4 +229,40 @@ Sai Mixins Extension for LESS v0.1
     -webkit-transition-duration:    @duration;
     -o-transition-duration:         @duration;
     transition-duration:            @duration;
+}
+
+
+/* Typography | Links
+=============================================================== */
+.hover-link(
+    @active: none,
+    @hover: underline
+) {
+    text-decoration: @active;
+    &:hover {
+        text-decoration: @hover;
+    }
+}
+
+
+.link-colors(
+    @normal: #00c,
+    @hover: #0cc,
+    @active: #c0c,
+    @visited: #ccc,
+    @focus: #cc0
+) {
+    color: @normal;
+    &:hover {
+        color: @hover;
+    }
+    &:active {
+        color: @active;
+    }
+    &:visited {
+        color: @visited;
+    }
+    &:focus {
+        color: @focus;
+    }
 }
