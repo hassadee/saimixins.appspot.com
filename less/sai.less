@@ -29,7 +29,17 @@ Sai Mixins Extension for LESS v0.1
 * Links
 * Lists
 * Text
-=============================================================== */
+=================================================================
+* Utilities : Table of Contents
+=================================================================
+* Links
+* Lists
+* Text
+* Color
+* General
+* Sprites
+* Tables
+============================================================== */
 
 
 /* Background Gradient
@@ -266,12 +276,28 @@ Sai Mixins Extension for LESS v0.1
     }
 }
 
-.unstyled-link() {
+.unstyled-link {
     color: inherit;
     text-decoration: inherit;
     cursor: inherit;
     &:active,
     &:focus {
         outline: none;
+    }
+}
+
+
+/* Typography | Lists
+=============================================================== */
+.no-bullet {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.no-bullets {
+    list-style: none;
+    li {
+        .no-bullet;
     }
 }
