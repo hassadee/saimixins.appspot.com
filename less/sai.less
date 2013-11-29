@@ -244,7 +244,6 @@ Sai Mixins Extension for LESS v0.1
     }
 }
 
-
 .link-colors(
     @normal: #00c,
     @hover: #0cc,
@@ -264,5 +263,15 @@ Sai Mixins Extension for LESS v0.1
     }
     &:focus {
         color: @focus;
+    }
+}
+
+.unstyled-link() {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+    &:active,
+    &:focus {
+        outline: none;
     }
 }
