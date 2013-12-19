@@ -1,52 +1,52 @@
-/* ===============================================================
-Sai Mixins Extension for LESS v0.1
-==================================================================
-* Author: Hassadee Pimsuwan | @hapztron
-* More info at: http://saimixins.appspot.com
-* GitHub Repository at: https://github.com/hapztron/sai
-*
-* Copyright (c) 2013 - Hassadee Pimsuwan
-* Licensed under the MIT license:
-* http://www.opensource.org/licenses/mit-license.php
-=================================================================
-* CSS3 : Table of Contents
-=================================================================
-* Background Gradient
-* Background Size
-* Border
-* Border Radius
-* Box Shadow
-* Calculate
-* Columns
-* Font Face
-* Opacity
-* Text Shadow
-* Transform
-* Transition Duration
-=================================================================
-* Typography : Table of Contents
-=================================================================
-* Links
-* Lists
-* Text
-=================================================================
-* Utilities : Table of Contents
-=================================================================
-* Links
-* Lists
-* Text
-* Color
-* General
-* Sprites
-* Tables
-============================================================== */
+// ===============================================================
+// Sai Mixins Extension for LESS v0.2
+// ==================================================================
+// Author: Hassadee Pimsuwan | @hapztron
+// More info at: http://saimixins.appspot.com
+// GitHub Repository at: https://github.com/hapztron/sai
+//
+// Copyright (c) 2013 - Hassadee Pimsuwan
+// Licensed under the MIT license:
+// http://www.opensource.org/licenses/mit-license.php
+// =================================================================
+// CSS3 : Table of Contents
+// =================================================================
+// Background Gradient
+// Background Size
+// Border
+// Border Radius
+// Box Shadow
+// Calculate
+// Columns
+// Font Face
+// Opacity
+// Text Shadow
+// Transform
+// Transition Duration
+// =================================================================
+// Typography : Table of Contents
+// =================================================================
+// Links
+// Lists
+// Text
+// =================================================================
+// Utilities : Table of Contents
+// =================================================================
+// Links
+// Lists
+// Text
+// Color
+// General
+// Sprites
+// Tables
+// ================================================================
 
 
-/* Background Gradient
-=============================================================== */
+// Background Gradient
+// ================================================================
 .gradient(
-    @color: #F5F5F5,
-    @start: #EEE,
+    @color: #F5F5F5;
+    @start: #EEE;
     @stop: #FFF
 ) {
     background: @color;
@@ -57,24 +57,26 @@ Sai Mixins Extension for LESS v0.1
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @stop, @start));
 }
 
-.bw-gradient(
-    @color: #F5F5F5,
-    @start: 0,
-    @stop: 255
+.rgba-gradient(
+    @color: #F5F5F5;
+    @start: 0;
+    @start-alpha: 0.75;
+    @stop: 255;
+    @stop-alpha: 0.75
 ) {
     background: @color;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)), color-stop(1, rgb(@stop,@stop,@stop)));
-    background: -ms-linear-gradient(bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
-    background: -moz-linear-gradient(center bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
-    background: -o-linear-gradient(rgb(@stop,@stop,@stop), rgb(@start,@start,@start));
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start)));
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(@start,@start,@start,@start-alpha)), color-stop(1, rgba(@stop,@stop,@stop,@stop-alpha)));
+    background: -ms-linear-gradient(bottom, rgba(@start,@start,@start,@start-alpha) 0%, rgba(@stop,@stop,@stop,@stop-alpha) 100%);
+    background: -moz-linear-gradient(center bottom, rgba(@start,@start,@start,@start-alpha) 0%, rgba(@stop,@stop,@stop,@stop-alpha) 100%);
+    background: -o-linear-gradient(rgba(@stop,@stop,@stop,@stop-alpha), rgba(@start,@start,@start,@start-alpha));
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgba(@stop,@stop,@stop,@stop-alpha),rgba(@start,@start,@start,@start-alpha)));
 }
 
 
-/* Background Size
-=============================================================== */
+// Background Size
+// ===============================================================
 .background-size(
-    @size: 100%
+    @size: cover
 ) {
     -webkit-background-size:    @size;
     -moz-background-size:       @size;
@@ -83,15 +85,15 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Border
-=============================================================== */
+// Border
+// ===============================================================
 .border (
-    @style: solid,
-    @border-width: 1px,
-    @top-color: #EEE,
-    @right-color: #EEE,
-    @bottom-color: #EEE,
-    @left-color: #EEE
+    @style: solid;
+    @border-width: 1px;
+    @top-color: #EEEEEE;
+    @right-color: #EEEEEE;
+    @bottom-color: #EEEEEE;
+    @left-color: #EEEEEE
 ) {
     border-top:     @arguments;
     border-left:    @arguments;
@@ -100,8 +102,8 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Border Radius
-=============================================================== */
+// Border Radius
+// ===============================================================
 .border-radius (
     @radius: 5px
 ) {
@@ -113,12 +115,12 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Box Shadow
-=============================================================== */
+// Box Shadow
+// ===============================================================
 .box-shadow (
-    @x-axis: 0,
-    @y-axis: 1px,
-    @blur: 2px,
+    @x-axis: 0;
+    @y-axis: 1px;
+    @blur: 2px;
     @color: #333
 ) when (iscolor(@color)) {
     -moz-box-shadow:    @arguments;
@@ -129,8 +131,8 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Calculate
-=============================================================== */
+// Calculate
+// ===============================================================
 .width-calc (
     @expression
 ) {
@@ -148,10 +150,10 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Columns
-=============================================================== */
+// Columns
+// ===============================================================
 .column-count(
-    @quantity
+    @quantity: 2
 ) {
     -webkit-column-count:   @quantity;
     -moz-column-count:      @quantity;
@@ -161,8 +163,8 @@ Sai Mixins Extension for LESS v0.1
 }
 
 .column-rule(
-    @width: 1px,
-    @style: solid,
+    @width: 1px;
+    @style: solid;
     @color: #333333
 ) {
     -webkit-column-rule:    @arguments;
@@ -173,13 +175,13 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Font Face
-=============================================================== */
+// Font Face
+// ===============================================================
 .font-face (
-    @name,
-    @font-file,
-    @format,
-    @weight: normal,
+    @name;
+    @font-file;
+    @format;
+    @weight: normal;
     @style: normal
 ) {
     font-family:    @name;
@@ -189,8 +191,8 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Opacity
-=============================================================== */
+// Opacity
+// ===============================================================
 .opacity (
     @opa: 0.75
 ) {
@@ -203,23 +205,23 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Text Shadow
-=============================================================== */
+// Text Shadow
+// ===============================================================
 .text-shadow(
-    @h-offset: 0px,
-    @v-offset: 0px,
-    @blur: 1px,
-    @color: #333333;
+    @h-offset: 0px;
+    @v-offset: 0px;
+    @blur: 1px;
+    @color: #333333
 ) {
     text-shadow: @arguments;
 }
 
 
-/* Transform
-=============================================================== */
+// Transform
+// ===============================================================
 .translate3d(
-    @x: 0,
-    @y: 0,
+    @x: 0;
+    @y: 0;
     @z: 0
 ) {
     -webkit-transform:  translate3d(@x, @y, @z);
@@ -230,8 +232,8 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Transition Duration
-=============================================================== */
+// Transition Duration
+// ===============================================================
 .transition-duration(
     @duration: 0.4s
 ) {
@@ -242,10 +244,10 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Typography | Links
-=============================================================== */
+// Typography | Links
+// ===============================================================
 .hover-link(
-    @active: none,
+    @active: none;
     @hover: underline
 ) {
     text-decoration: @active;
@@ -255,10 +257,10 @@ Sai Mixins Extension for LESS v0.1
 }
 
 .link-colors(
-    @normal: #00c,
-    @hover: #0cc,
-    @active: #c0c,
-    @visited: #ccc,
+    @normal: #00c;
+    @hover: #0cc;
+    @active: #c0c;
+    @visited: #ccc;
     @focus: #cc0
 ) {
     color: @normal;
@@ -276,7 +278,7 @@ Sai Mixins Extension for LESS v0.1
     }
 }
 
-.unstyled-link {
+.unstyled-link() {
     color: inherit;
     text-decoration: inherit;
     cursor: inherit;
@@ -287,26 +289,31 @@ Sai Mixins Extension for LESS v0.1
 }
 
 
-/* Typography | Lists
-=============================================================== */
-.no-bullet {
+// Typography | Lists
+// ===============================================================
+.no-bullet() {
     list-style-image: none;
     list-style-type: none;
     margin-left: 0;
 }
 
-.no-bullets {
+.no-bullets() {
     list-style: none;
     li {
         .no-bullet;
     }
 }
 
-.inline-list {
+.inline-list() {
     list-style-type: none;
     li {
         margin: 0px;
         padding: 0px;
         display: inline;
     }
+}
+
+.ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
 }
