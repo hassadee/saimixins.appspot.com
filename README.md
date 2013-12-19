@@ -8,7 +8,7 @@ Sai is a Mixins extension and CSS Authoring Framework for LESS and SASS/SCSS.
 
 This will help you increase performance and reduce time of writing CSS. So you don't need to worry about browsers prefix anymore!
 
-This framework also offers a set of CSS for usual designs (such as make circle image) to help you make a beautiful website easier than before.
+This framework also offers a set of CSS for usual designs (such as make circle image) to help you make a beautiful website more easily than ever before.
 
 ## Contact
 
