@@ -1,5 +1,5 @@
 // ===============================================================
-// Sai Mixins Extension for LESS v0.2
+// Sai Mixins Extension for LESS v1.0
 // ==================================================================
 // Author: Hassadee Pimsuwan | @hapztron
 // More info at: http://saimixins.appspot.com
@@ -32,13 +32,7 @@
 // =================================================================
 // Utilities : Table of Contents
 // =================================================================
-// Links
-// Lists
-// Text
-// Color
 // General
-// Sprites
-// Tables
 // ================================================================
 
 
@@ -46,8 +40,8 @@
 // ================================================================
 .gradient(
     @color: #F5F5F5;
-    @start: #EEE;
-    @stop: #FFF
+    @start: #EEEEEE;
+    @stop: #FFFFFF
 ) {
     background: @color;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
@@ -257,11 +251,11 @@
 }
 
 .link-colors(
-    @normal: #00c;
-    @hover: #0cc;
-    @active: #c0c;
-    @visited: #ccc;
-    @focus: #cc0
+    @normal: #0088CC;
+    @hover: #0077CC;
+    @active: #0066CC;
+    @visited: #CCCCCC;
+    @focus: #CCCC00
 ) {
     color: @normal;
     &:hover {
@@ -313,7 +307,61 @@
     }
 }
 
+
+// Typography | Text
+// ===============================================================
 .ellipsis() {
-    white-space: nowrap;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.force-wrap() {
+    white-space: pre;
+    // CSS 2.0
+    white-space: pre-wrap;
+    // CSS 2.1
+    white-space: pre-line;
+    // CSS 3.0
+    white-space: -pre-wrap;
+    // Opera 4-6
+    white-space: -o-pre-wrap;
+    // Opera 7
+    white-space: -moz-pre-wrap;
+    // Mozilla
+    white-space: -hp-pre-wrap;
+    // HP Printers
+    word-wrap: break-word;
+    // IE 5+
+}
+
+.nowrap() {
+    white-space: nowrap;
+}
+
+
+// Utilities | General
+// ===============================================================
+.clearfix() {
+    overflow: hidden;
+    &:after {
+        clear: both;
+        content: "\0020";
+        display: block;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.float(@side: left) {
+    display: inline;
+    float: @side;
+}
+
+.reset-float(@display: block) {
+    float: none;
+    display: @display;
 }
